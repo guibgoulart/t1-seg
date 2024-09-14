@@ -53,9 +53,9 @@ def encontrar_comprimento_chave_provavel(distancias):
             fatores = fatores_primos(distancia)
             fatores_unicos = set(fatores)
             for fator in fatores_unicos:
-                contagem_fatores[fator] += 1
+                    contagem_fatores[fator] += 1
 
-    # Encontra o fator mais frequente
+    # Encontra o fator mais frequente 
     comprimento_provavel = max(contagem_fatores, key=contagem_fatores.get, default=1)
 
     return comprimento_provavel
@@ -83,7 +83,7 @@ def testar_metodo_kasiski():
     # Texto em claro
     texto_claro = """On voit parfois, sur la fin de l hiver, le jardinier soucieux de son jardin, se promener le long des espaliers et des treilles. Il examine l  etat des bourgeons et du bois, interroge d un œil attentif les myst erieuses enveloppes que va gonfler et d echirer bientot la seve du printemps. Ces promenades ou l anxi et e se mêle toujours a l esp erance, me rappellent par analogie, une autre promenade, plus troublante encore et plus int eressante, celle que peut faire a travers la jeunesse le penseur pr eoccup e de l avenir. La aussi dort, envelopp ee et pourtant apparente d eja sous le voile qui la recouvre, la grande -4- question de demain. Il germe et grandit dans le cœur des jeunes, il fermente sous leur front des choses plus significatives que celles qu essaie de deviner le jardinier sous l  ecorce des bourgeons.
 
-Int eressante toujours, et toujours digne de la plus sympathique attention, la jeunesse m erite surtout de nous attirer aux  epoques critiques, ou des changements d orientation s annoncent. Ne semble-t-il pas que tel soit le cas a la fin de ce siecle ? Sans doute, c est une erreur grossiere que de confondre les p eriodes de l  evolution humaine avec ces divisions chronologiques factices qu on appelle des siecles. On attribue aux siecles une jeunesse et une vieillesse, on parle de leur aurore et de leur d eclin. Rien ne r epond moins a la r ealit e. Des mouvements puissants ont marqu e la fin de certains siecles ; d autres ont commenc e dans le marasme et la s enilit e. Il n en est pas moins vrai qu il peut se produire une coïncidence entre le terme d une p eriode historique et le terme d un siecle. Tel est, je crois, le cas a l heure pr esente. Nous avons derriere nous tout un vaste d eveloppement, dans lequel on peut remarquer, apres les enthousiasmes -5- juv eniles et les efforts virils d une brillante maturit e, les h esitations et les symptomes de lassitude ordinaires a la vieillesse. Mais, comme l humanit e se renouvelle sans cesse et renait de ses cendres, c est au moment ou les choses anciennes sont arriv ees a leur maximum de d ecr epitude, que les choses neuves se pr eparent."""
+    Int eressante toujours, et toujours digne de la plus sympathique attention, la jeunesse m erite surtout de nous attirer aux  epoques critiques, ou des changements d orientation s annoncent. Ne semble-t-il pas que tel soit le cas a la fin de ce siecle ? Sans doute, c est une erreur grossiere que de confondre les p eriodes de l  evolution humaine avec ces divisions chronologiques factices qu on appelle des siecles. On attribue aux siecles une jeunesse et une vieillesse, on parle de leur aurore et de leur d eclin. Rien ne r epond moins a la r ealit e. Des mouvements puissants ont marqu e la fin de certains siecles ; d autres ont commenc e dans le marasme et la s enilit e. Il n en est pas moins vrai qu il peut se produire une coïncidence entre le terme d une p eriode historique et le terme d un siecle. Tel est, je crois, le cas a l heure pr esente. Nous avons derriere nous tout un vaste d eveloppement, dans lequel on peut remarquer, apres les enthousiasmes -5- juv eniles et les efforts virils d une brillante maturit e, les h esitations et les symptomes de lassitude ordinaires a la vieillesse. Mais, comme l humanit e se renouvelle sans cesse et renait de ses cendres, c est au moment ou les choses anciennes sont arriv ees a leur maximum de d ecr epitude, que les choses neuves se pr eparent."""
     
     # Chave conhecida
     chave = "RAPHAELAMBROSIUSCOSTEAU"
@@ -103,6 +103,4 @@ Int eressante toujours, et toujours digne de la plus sympathique attention, la j
     # Passo 3: Encontra o comprimento provável da chave
     comprimento_chave = encontrar_comprimento_chave_provavel(distancias)
     print(f"Comprimento provável da chave (deve ser {len(chave)}): {comprimento_chave}")
-
-# Executar o teste
-testar_metodo_kasiski()
+ 
