@@ -31,32 +31,23 @@ def get_distances(texto_cifrado, repeating_words):
     return distances
 
 # Função para calcular os fatores primos de um número (seguindo a lógica fornecida)
-def fatores_primos(number):
-    fatores = []
-    i = 2
-    while i <= number // i:
-        while number % i == 0:
-            fatores.append(i)
-            number //= i
-        i += 1
-    if number > 1:
-        fatores.append(number)
-    return fatores
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return abs(a)
 
 # Encontra o comprimento provável da chave com base nas distâncias calculadas.
 def encontrar_comprimento_chave_provavel(distancias):
-    contagem_fatores = defaultdict(int)
+    contagem_mdcs = defaultdict(int)
 
     # Fatora cada distância e conta a frequência dos fatores.
     for distancias_set in distancias.values():
         for distancia in distancias_set:
-            fatores = fatores_primos(distancia)
-            fatores_unicos = set(fatores)
-            for fator in fatores_unicos:
-                    contagem_fatores[fator] += 1
+            mdc = gcd(distancia,0)
+            contagem_mdcs[mdc] += 1
 
     # Encontra o fator mais frequente 
-    comprimento_provavel = max(contagem_fatores, key=contagem_fatores.get, default=1)
+    comprimento_provavel = max(contagem_mdcs, key=contagem_mdcs.get, default=1)
 
     return comprimento_provavel
 
